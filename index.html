@@ -1,0 +1,1920 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentacion del proyecto BI farmabi">
+      
+      
+      
+      
+      
+        <link rel="next" href="silabo_bi_2026_1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>farmabi - Business Intelligence</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#farmabi-business-intelligence" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="farmabi - Business Intelligence" class="md-header__button md-logo" aria-label="farmabi - Business Intelligence" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            farmabi - Business Intelligence
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Inicio
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="farmabi - Business Intelligence" class="md-nav__button md-logo" aria-label="farmabi - Business Intelligence" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    farmabi - Business Intelligence
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#producto-del-curso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Producto del curso
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contenido
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contenido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#u1-definicion-del-sistema-de-informacion-para-ejecutivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        U1: Definicion del sistema de informacion para ejecutivos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#u2-construccion-del-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        U2: Construccion del BI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#u3-integracion-y-toma-de-decisiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        U3: Integracion y toma de decisiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observaciones-sobre-las-sesiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Observaciones sobre las sesiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitectura-farmabi-v2026-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitectura farmabi v2026-1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitectura-alternativa-con-airbyte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitectura alternativa con Airbyte
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modulos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo de trabajo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enlaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enlaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proyecto Sello
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Proyecto Sello
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="proyecto-sello/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía del proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Silabos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Silabos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="silabo_bi_2026_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Silabo 2026-1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="silabo_bi_2026_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Silabo 2026-2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guias y plantillas
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guias y plantillas
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guias/PLANTILLA_ENTREGABLE_U1_REQUERIMIENTOS_BI_MODELADO_DIMENSIONAL.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plantilla entregable U1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guias/PLANTILLA_ENTREGABLE_U2_ETL_CALIDAD_DATOS_DATAMART.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plantilla entregable U2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guias/PLANTILLA_PRODUCTO_CURSO_U3_BI_END_TO_END.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plantilla producto del curso U3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guias/ingesta-debezium-detalle.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guia ingesta Debezium
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="guias/pasos_24_25_comparativos_ventas_pedidos.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comparativos ventas pedidos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Definicion del sistema de informacion para ejecutivos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1. Definicion del sistema de informacion para ejecutivos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sesiones/s01-fundamentos-bi.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S1 - Fundamentos BI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sesiones/s02-requerimientos-kpis.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S2 - Requerimientos y KPIs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sesiones/s03-modelado-dimensional-metadata.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S3 - Modelado dimensional y metadata
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sesiones/s04-diseno-solucion-bi.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S4 - Diseno de la solucion BI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sesiones/s05-evaluacion-u1.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S5 - Evaluacion U1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Construccion del BI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2. Construccion del BI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sesiones/s06-dw-manual-sql.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S6 - DW manual con SQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sesiones/s07-pipeline-bi-herramientas.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S7 - Pipeline BI con herramientas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sesiones/s08-modelo-semantico-metricas.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S8 - Modelo semantico y metricas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sesiones/s09-visualizacion-bi-base.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S9 - Visualizacion BI base
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sesiones/s10-paneles-interactivos.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S10 - Paneles interactivos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sesiones/s11-interpretacion-gobierno-dato.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S11 - Interpretacion y gobierno del dato
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sesiones/s12-evaluacion-u2.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S12 - Evaluacion U2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. Integracion y toma de decisiones
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3. Integracion y toma de decisiones
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sesiones/s13-integracion-end-to-end.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S13 - Integracion end-to-end
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sesiones/s14-validacion-negocio.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S14 - Validacion con negocio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sesiones/s15-sustentacion-final.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S15 - Sustentacion final
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="sesiones/s16-evaluacion-final.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S16 - Evaluacion final
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#producto-del-curso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Producto del curso
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contenido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contenido
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contenido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#u1-definicion-del-sistema-de-informacion-para-ejecutivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        U1: Definicion del sistema de informacion para ejecutivos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#u2-construccion-del-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        U2: Construccion del BI
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#u3-integracion-y-toma-de-decisiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        U3: Integracion y toma de decisiones
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observaciones-sobre-las-sesiones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Observaciones sobre las sesiones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitectura-farmabi-v2026-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitectura farmabi v2026-1
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arquitectura-alternativa-con-airbyte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arquitectura alternativa con Airbyte
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modulos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flujo-de-trabajo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flujo de trabajo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enlaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enlaces
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="farmabi-business-intelligence">farmabi - Business Intelligence</h1>
+<p>Curso practico de Business Intelligence para construir una solucion analitica completa desde una base transaccional hasta un modelo consumible en Power BI. El curso integra definicion del problema de negocio, requerimientos analiticos, modelado dimensional, construccion del Data Warehouse, pipelines de ingesta, modelo semantico, visualizacion, gobierno del dato y sustentacion tecnica.</p>
+<p><a href="https://github.com/261bi/farmabi"><code>farmabi</code></a> es un laboratorio BI reproducible para implementar un flujo completo de datos:</p>
+<div class="highlight"><pre><span></span><code>MySQL OLTP -&gt; Debezium -&gt; Kafka -&gt; PostgreSQL RAW -&gt; dbt -&gt; PostgreSQL DW -&gt; Power BI
+</code></pre></div>
+<h2 id="producto-del-curso">Producto del curso</h2>
+<p>Producto del curso = Producto U3:</p>
+<div class="highlight"><pre><span></span><code>Solucion BI end-to-end para toma de decisiones, con origen transaccional,
+Data Warehouse/DataMart, pipeline de ingesta y transformacion, modelo semantico,
+dashboard interactivo, validacion de KPIs, trazabilidad y sustentacion tecnica.
+</code></pre></div>
+<p>Resultado esperado del curso:</p>
+<p>Al finalizar el curso, el estudiante analiza un problema de negocio, define requerimientos analiticos y KPIs, modela dimensionalmente una solucion BI, implementa un Data Warehouse/DataMart, construye un pipeline de ingesta y transformacion, desarrolla un modelo semantico y presenta dashboards interactivos en Power BI. La solucion debe incluir evidencias de consistencia de datos, trazabilidad fuente-modelo-KPI, validacion con negocio, gobierno del dato y una demo end-to-end defendida tecnicamente.</p>
+<h2 id="contenido">Contenido</h2>
+<h3 id="u1-definicion-del-sistema-de-informacion-para-ejecutivos">U1: Definicion del sistema de informacion para ejecutivos</h3>
+<p>Producto U1: diseno funcional y analitico de la solucion BI, con problema de negocio, requerimientos, KPIs, modelo dimensional, metadata y mockup del dashboard.</p>
+<p>Resultado esperado U1: el estudiante convierte una necesidad de negocio en una especificacion BI verificable. Define preguntas analiticas, KPIs, hechos, grano, dimensiones, jerarquias, fuentes de datos, mapeo fuente-modelo y una primera propuesta de consumo analitico para ejecutivos.</p>
+<table>
+<thead>
+<tr>
+<th>Sesion</th>
+<th>Tema</th>
+<th>Producto de sesion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S1</td>
+<td>Fundamentos BI: problema de negocio y ciclo BI negocio -&gt; datos -&gt; insight -&gt; decision</td>
+<td>Caso de negocio BI delimitado, actores, decisiones esperadas y preguntas analiticas iniciales</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>Requerimientos analiticos y KPIs</td>
+<td>Matriz de requerimientos analiticos con KPIs, formulas, dimensiones de analisis y criterios de aceptacion</td>
+</tr>
+<tr>
+<td>S3</td>
+<td>Modelado dimensional y metadata: hechos, grano, dimensiones, jerarquias, fuentes y mapeo fuente-modelo</td>
+<td>Modelo dimensional inicial con hecho principal, dimensiones, grano, jerarquias, diccionario de datos y trazabilidad fuente-modelo</td>
+</tr>
+<tr>
+<td>S4</td>
+<td>Diseno de la solucion BI: KPIs, mockup del dashboard y consumo analitico</td>
+<td>Blueprint de la solucion BI con KPIs priorizados, mockup del dashboard, filtros, usuarios y flujo de consumo</td>
+</tr>
+<tr>
+<td>S5</td>
+<td>Evaluacion U1</td>
+<td>Documento de diseno BI validado y defendido como base de construccion</td>
+</tr>
+</tbody>
+</table>
+<h3 id="u2-construccion-del-bi">U2: Construccion del BI</h3>
+<p>Producto U2: solucion BI implementada con Data Warehouse/DataMart, pipeline de ingesta y transformacion, modelo semantico, metricas, visualizaciones, paneles interactivos, validacion analitica y gobierno del dato.</p>
+<p>Resultado esperado U2: el estudiante implementa la solucion BI definida en U1 usando los componentes del laboratorio <code>farmabi</code>: MySQL OLTP como fuente, Debezium + Kafka para replica CDC, PostgreSQL RAW/DW como repositorio analitico, SQL/dbt para transformacion, y Power BI para modelo semantico, metricas y visualizacion.</p>
+<table>
+<thead>
+<tr>
+<th>Sesion</th>
+<th>Tema</th>
+<th>Producto de sesion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S6</td>
+<td>Implementacion manual del DW con SQL: ETL manual, transformacion, carga y validacion analitica</td>
+<td>DataMart manual construido con SQL, dimensiones/hecho cargados y consultas de validacion analitica</td>
+</tr>
+<tr>
+<td>S7</td>
+<td>Implementacion del pipeline BI con herramientas: ingesta, CDC, transformacion, carga incremental, optimizacion y SCD</td>
+<td>Pipeline BI automatizado o semi-automatizado con replica MySQL -&gt; PostgreSQL, transformaciones dbt y evidencia de carga incremental/CDC/SCD segun alcance</td>
+</tr>
+<tr>
+<td>S8</td>
+<td>Modelo semantico y metricas BI: OLAP, jerarquias, medidas y agregaciones</td>
+<td>Modelo semantico en Power BI con relaciones, jerarquias, medidas DAX y agregaciones validadas</td>
+</tr>
+<tr>
+<td>S9</td>
+<td>Visualizacion BI base: KPIs, metricas y filtros</td>
+<td>Reporte BI base con tarjetas KPI, graficos principales, filtros y lectura inicial de resultados</td>
+</tr>
+<tr>
+<td>S10</td>
+<td>Diseno de paneles interactivos: drill-down, drill-through, tooltips y segmentacion</td>
+<td>Dashboard interactivo con navegacion analitica, segmentadores, tooltips y rutas de exploracion</td>
+</tr>
+<tr>
+<td>S11</td>
+<td>Interpretacion BI y gobierno del dato: storytelling, trazabilidad y validacion</td>
+<td>Historia analitica con hallazgos, trazabilidad fuente-modelo-KPI, reglas de calidad y validacion de consistencia</td>
+</tr>
+<tr>
+<td>S12</td>
+<td>Evaluacion U2</td>
+<td>Solucion BI construida, validada y presentada con evidencias tecnicas</td>
+</tr>
+</tbody>
+</table>
+<h3 id="u3-integracion-y-toma-de-decisiones">U3: Integracion y toma de decisiones</h3>
+<p>Producto U3 / producto del curso: solucion BI end-to-end integrada, validada con negocio, documentada y sustentada mediante demo tecnica.</p>
+<p>Resultado esperado U3: el estudiante integra ETL, DataMart, modelo semantico y visualizacion en una demo completa orientada a decisiones. La defensa debe mostrar la trazabilidad desde la fuente transaccional hasta los KPIs del dashboard, explicar decisiones de modelado y demostrar consistencia de datos.</p>
+<table>
+<thead>
+<tr>
+<th>Sesion</th>
+<th>Tema</th>
+<th>Producto de sesion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S13</td>
+<td>Integracion completa: ETL + DataMart + Visualizacion</td>
+<td>Flujo end-to-end operativo desde MySQL OLTP hasta Power BI, con evidencias de ejecucion</td>
+</tr>
+<tr>
+<td>S14</td>
+<td>Validacion con negocio: KPIs, trazabilidad y consistencia de datos</td>
+<td>Validacion final de KPIs, conciliacion de datos, matriz de trazabilidad y ajustes de consistencia</td>
+</tr>
+<tr>
+<td>S15</td>
+<td>Sustentacion final: demo end-to-end BI</td>
+<td>Demo final de la solucion BI, narrativa ejecutiva y defensa tecnica del aporte</td>
+</tr>
+<tr>
+<td>S16</td>
+<td>Examen Final</td>
+<td>Evaluacion individual de competencias BI y toma de decisiones basada en datos</td>
+</tr>
+</tbody>
+</table>
+<h2 id="observaciones-sobre-las-sesiones">Observaciones sobre las sesiones</h2>
+<ul>
+<li>La secuencia esta bien planteada: primero define el sistema BI, luego lo construye y finalmente lo integra para la toma de decisiones.</li>
+<li>S6 y S7 se complementan bien: S6 permite entender el ETL manual y S7 profesionaliza el flujo con herramientas.</li>
+<li>S8 deberia cerrar explicitamente la separacion entre modelo fisico del DataMart y modelo semantico en Power BI, para evitar que el estudiante mezcle responsabilidades.</li>
+<li>S11 conviene mantenerlo antes de la evaluacion U2 porque obliga a validar trazabilidad, calidad e interpretacion antes de presentar el producto.</li>
+<li>En S13 y S14 el foco no deberia ser agregar funcionalidades nuevas, sino integrar, estabilizar y validar la solucion completa.</li>
+</ul>
+<h2 id="arquitectura-farmabi-v2026-1">Arquitectura farmabi v2026-1</h2>
+<pre class="mermaid"><code>flowchart TB
+    subgraph Source["fuente operacional"]
+        direction TB
+        MySQL["MySQL OLTP&lt;br/&gt;farma_oltp_db&lt;br/&gt;localhost:53306"]
+    end
+
+    subgraph Producers["producers"]
+        direction TB
+        Debezium["Debezium Connect&lt;br/&gt;CDC producer&lt;br/&gt;localhost:58083"]
+        BatchLoad["Batch producer&lt;br/&gt;historico / backfill"]
+        MySQL --&gt;|"binlog"| Debezium
+        MySQL --&gt;|"extract historico"| BatchLoad
+    end
+
+    subgraph KafkaModule["kafka"]
+        direction TB
+        Kafka["Apache Kafka&lt;br/&gt;eventos realtime + batch&lt;br/&gt;kafka:9092 / localhost:59092"]
+        KafkaUI["Kafka UI&lt;br/&gt;localhost:58085"]
+        Kafka --&gt; KafkaUI
+    end
+
+    subgraph Consumers["consumers"]
+        direction TB
+        Sink["PostgreSQL sink&lt;br/&gt;Kafka Connect"]
+    end
+
+    subgraph Warehouse["data warehouse: PostgreSQL&lt;br/&gt;farmabi_dw - localhost:55432"]
+        direction TB
+        Raw["RAW&lt;br/&gt;farmabi_dw.raw"]
+        Staging["STAGING&lt;br/&gt;farmabi_dw.staging"]
+        Marts["DataMart&lt;br/&gt;farmabi_dw.marts"]
+    end
+
+    subgraph Transform["transformacion"]
+        direction TB
+        Dbt["dbt&lt;br/&gt;staging + marts"]
+    end
+
+    subgraph BI["consumo BI"]
+        direction TB
+        PowerBI["Power BI&lt;br/&gt;modelo semantico + DAX"]
+        Dashboard["Dashboard ejecutivo&lt;br/&gt;KPIs y decisiones"]
+        PowerBI --&gt; Dashboard
+    end
+
+    Debezium --&gt;|"eventos CDC"| Kafka
+    BatchLoad --&gt;|"eventos batch"| Kafka
+    Kafka --&gt;|"consume topics"| Sink
+    Sink --&gt;|"escribe"| Raw
+    Dbt --&gt;|"lee RAW"| Raw
+    Dbt --&gt;|"materializa staging"| Staging
+    Dbt --&gt;|"materializa marts"| Marts
+    Marts --&gt; PowerBI</code></pre>
+<p>Convencion del diagrama: <code>farmabi</code> representa el caso de uso <code>uso-replica-cdc</code>. Los producers publican eventos realtime o batch en Kafka; el PostgreSQL sink de Kafka Connect es el consumer que escribe en <code>farmabi_dw.raw</code>; dbt transforma el Data Warehouse hacia <code>staging</code> y <code>marts</code>; Power BI consume el DataMart para el analisis ejecutivo.</p>
+<h2 id="arquitectura-alternativa-con-airbyte">Arquitectura alternativa con Airbyte</h2>
+<pre class="mermaid"><code>flowchart TB
+    subgraph SourceAirbyte["fuente operacional"]
+        direction TB
+        MySQLAirbyte["MySQL OLTP&lt;br/&gt;farma_oltp_db&lt;br/&gt;localhost:53306"]
+    end
+
+    subgraph IngestionAirbyte["ingesta batch/configurada"]
+        direction TB
+        Airbyte["Airbyte local&lt;br/&gt;localhost:8010"]
+    end
+
+    subgraph WarehouseAirbyte["data warehouse: PostgreSQL&lt;br/&gt;farmabi_dw - localhost:55432"]
+        direction TB
+        RawAirbyte["RAW&lt;br/&gt;farmabi_dw.raw"]
+        StagingAirbyte["STAGING&lt;br/&gt;farmabi_dw.staging"]
+        MartsAirbyte["DataMart&lt;br/&gt;farmabi_dw.marts"]
+    end
+
+    subgraph TransformAirbyte["transformacion"]
+        direction TB
+        DbtAirbyte["dbt&lt;br/&gt;staging + marts"]
+    end
+
+    subgraph BIAirbyte["consumo BI"]
+        direction TB
+        PowerBIAirbyte["Power BI&lt;br/&gt;modelo semantico + DAX"]
+        DashboardAirbyte["Dashboard ejecutivo&lt;br/&gt;KPIs y decisiones"]
+        PowerBIAirbyte --&gt; DashboardAirbyte
+    end
+
+    MySQLAirbyte --&gt;|"source"| Airbyte
+    Airbyte --&gt;|"replica"| RawAirbyte
+    DbtAirbyte --&gt;|"lee RAW"| RawAirbyte
+    DbtAirbyte --&gt;|"materializa staging"| StagingAirbyte
+    DbtAirbyte --&gt;|"materializa marts"| MartsAirbyte
+    MartsAirbyte --&gt; PowerBIAirbyte</code></pre>
+<p>Convencion del diagrama: esta variante reemplaza Debezium + Kafka por Airbyte. Airbyte replica datos desde MySQL hacia <code>farmabi_dw.raw</code>; dbt materializa <code>staging</code> y <code>marts</code>; Power BI consume el DataMart.</p>
+<h2 id="modulos">Modulos</h2>
+<table>
+<thead>
+<tr>
+<th>Modulo</th>
+<th>Rol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>oltp-mysql/</code></td>
+<td>Origen transaccional MySQL con la base <code>farma_oltp_db</code></td>
+</tr>
+<tr>
+<td><code>dw-pg/</code></td>
+<td>PostgreSQL analitico con la base <code>farmabi_dw</code></td>
+</tr>
+<tr>
+<td><code>ingesta-debezium/</code></td>
+<td>Ingesta CDC con Debezium + Kafka para eventos realtime e integracion batch</td>
+</tr>
+<tr>
+<td><code>ingesta-airbyte/</code></td>
+<td>Ingesta batch/configurada con Airbyte como alternativa a Debezium + Kafka</td>
+</tr>
+<tr>
+<td><code>dw-dbt/</code></td>
+<td>Transformacion con dbt desde <code>raw</code> hacia <code>staging</code> y <code>marts</code></td>
+</tr>
+<tr>
+<td><code>powerbi/</code></td>
+<td>Modelo semantico, medidas DAX, reportes y dashboards</td>
+</tr>
+<tr>
+<td><code>docs/</code></td>
+<td>Libro digital MkDocs con sesiones y guias</td>
+</tr>
+</tbody>
+</table>
+<h2 id="flujo-de-trabajo">Flujo de trabajo</h2>
+<ol>
+<li>El alumno analiza el problema de negocio y define requerimientos analiticos antes de construir.</li>
+<li>El origen transaccional se prepara en <code>oltp-mysql/</code> como fuente operacional del caso.</li>
+<li>El repositorio analitico se levanta en <code>dw-pg/</code>, separando capas <code>raw</code>, <code>staging</code> y <code>marts</code>.</li>
+<li>La ingesta se implementa con <code>ingesta-debezium/</code>, usando Kafka como eje para eventos realtime y cargas batch.</li>
+<li>Las transformaciones se modelan en <code>dw-dbt/</code>, construyendo dimensiones, hechos, pruebas y documentacion tecnica.</li>
+<li>Power BI consume el modelo estrella final desde <code>marts</code>, define metricas DAX y construye dashboards.</li>
+<li>La solucion se valida con consultas SQL, pruebas dbt, conciliacion de KPIs y revision de trazabilidad.</li>
+<li>El producto final se integra, estabiliza y sustenta como una demo BI end-to-end.</li>
+</ol>
+<h2 id="enlaces">Enlaces</h2>
+<ul>
+<li><a href="sesiones/s01-fundamentos-bi.md">Sesiones</a></li>
+<li><a href="guias/PLANTILLA_ENTREGABLE_U1_REQUERIMIENTOS_BI_MODELADO_DIMENSIONAL.md">Plantilla entregable U1</a></li>
+<li><a href="guias/PLANTILLA_ENTREGABLE_U2_ETL_CALIDAD_DATOS_DATAMART.md">Plantilla entregable U2</a></li>
+<li><a href="guias/PLANTILLA_PRODUCTO_CURSO_U3_BI_END_TO_END.md">Plantilla producto del curso U3</a></li>
+<li><a href="guias/pasos_24_25_comparativos_ventas_pedidos.md">Comparativos ventas pedidos</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="javascripts/mermaid.js"></script>
+      
+    
+  </body>
+</html>
