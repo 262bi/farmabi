@@ -4,37 +4,10 @@ docs_dir: docs
 
 nav:
   - Inicio: index.md
-  - Proyecto Sello:
-      - Guía del proyecto: proyecto-sello/index.md
   - Silabos:
       - Silabo 2026-1: silabo_bi_2026_1.md
       - Silabo 2026-2: silabo_bi_2026_2.md
   - Repositorio 2026-1 (farmabi): https://github.com/261bi/farmabi
-  - "Guias y plantillas":
-      - Plantilla entregable U1: guias/PLANTILLA_ENTREGABLE_U1_REQUERIMIENTOS_BI_MODELADO_DIMENSIONAL.md
-      - Plantilla entregable U2: guias/PLANTILLA_ENTREGABLE_U2_ETL_CALIDAD_DATOS_DATAMART.md
-      - Plantilla producto del curso U3: guias/PLANTILLA_PRODUCTO_CURSO_U3_BI_END_TO_END.md
-      - Guia ingesta Debezium: guias/ingesta-debezium-detalle.md
-      - Comparativos ventas pedidos: guias/pasos_24_25_comparativos_ventas_pedidos.md
-  - "1. Definicion del sistema de informacion para ejecutivos":
-      - S1 - Fundamentos BI: sesiones/s01-fundamentos-bi.md
-      - S2 - Requerimientos y KPIs: sesiones/s02-requerimientos-kpis.md
-      - S3 - Modelado dimensional y metadata: sesiones/s03-modelado-dimensional-metadata.md
-      - S4 - Diseno de la solucion BI: sesiones/s04-diseno-solucion-bi.md
-      - S5 - Evaluacion U1: sesiones/s05-evaluacion-u1.md
-  - "2. Construccion del BI":
-      - S6 - DW manual con SQL: sesiones/s06-dw-manual-sql.md
-      - S7 - Pipeline BI con herramientas: sesiones/s07-pipeline-bi-herramientas.md
-      - S8 - Modelo semantico y metricas: sesiones/s08-modelo-semantico-metricas.md
-      - S9 - Visualizacion BI base: sesiones/s09-visualizacion-bi-base.md
-      - S10 - Paneles interactivos: sesiones/s10-paneles-interactivos.md
-      - S11 - Interpretacion y gobierno del dato: sesiones/s11-interpretacion-gobierno-dato.md
-      - S12 - Evaluacion U2: sesiones/s12-evaluacion-u2.md
-  - "3. Integracion y toma de decisiones":
-      - S13 - Integracion end-to-end: sesiones/s13-integracion-end-to-end.md
-      - S14 - Validacion con negocio: sesiones/s14-validacion-negocio.md
-      - S15 - Sustentacion final: sesiones/s15-sustentacion-final.md
-      - S16 - Evaluacion final: sesiones/s16-evaluacion-final.md
 
 theme:
   name: material
