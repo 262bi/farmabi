@@ -2,11 +2,17 @@
 
 Curso practico de Business Intelligence para construir una solucion analitica completa desde una base transaccional hasta un modelo consumible en Power BI. El curso integra definicion del problema de negocio, requerimientos analiticos, modelado dimensional, construccion del Data Warehouse, pipelines de ingesta, modelo semantico, visualizacion, gobierno del dato y sustentacion tecnica.
 
-[`farmabi`](https://github.com/261bi/farmabi) es un laboratorio BI reproducible para implementar un flujo completo de datos:
+[`farmabi`](https://github.com/262bi/farmabi) es un laboratorio BI reproducible para implementar un flujo completo de datos:
 
 ```text
 MySQL OLTP -> Debezium -> Kafka -> PostgreSQL RAW -> dbt -> PostgreSQL DW -> Power BI
 ```
+
+!!! note "Versión anterior del curso (2026-1)"
+    El ciclo 2026-1 de este curso (entonces bajo la organización `261bi`) ya tiene su propio entorno de desarrollo y sus 16 sesiones construidas, disponibles como referencia:
+
+    - Repositorio: [`261bi/farmabi`](https://github.com/261bi/farmabi)
+    - Grabaciones y materiales de sesión: [Google Drive](https://drive.google.com/drive/folders/10G5snPuZMHih_3TkpWQLII_fb9p8PQ_N)
 
 ## Producto del curso
 
@@ -203,7 +209,7 @@ Convencion del diagrama: esta variante reemplaza Debezium + Kafka por Airbyte. A
 
 ## Enlaces
 
-- [Sesiones](sesiones/s01-fundamentos-bi.md)
+- [S1 - Fundamentos BI y problema de negocio](sesiones/S01_Fundamentos_BI_Problema_Negocio.md)
 - [Plantilla entregable U1](guias/PLANTILLA_ENTREGABLE_U1_REQUERIMIENTOS_BI_MODELADO_DIMENSIONAL.md)
 - [Plantilla entregable U2](guias/PLANTILLA_ENTREGABLE_U2_ETL_CALIDAD_DATOS_DATAMART.md)
 - [Plantilla producto del curso U3](guias/PLANTILLA_PRODUCTO_CURSO_U3_BI_END_TO_END.md)
