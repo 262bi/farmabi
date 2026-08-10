@@ -12,11 +12,11 @@ Al finalizar el Proyecto Sello, el estudiante demuestra que puede transformar un
 
 | Código | Competencia | Relación con el proyecto |
 |---|---|---|
-| CE022 | Ingeniería de la Información | Evidencia modelado dimensional, Data Warehouse/DataMart, datasets, trazabilidad, calidad de datos y soporte a decisiones. |
-| CE023 | Programación | Evidencia construcción técnica del pipeline de ingesta y transformación, y del modelo semántico consumido en el dashboard. |
-| CE024 | Calidad de Software | Evidencia validación, reproducibilidad, documentación, repositorio y sustentación integral. |
+| CE041 | Problema analítico y preparación de datos | Evidencia la formulación del problema de decisión, los KPIs y las fuentes de datos del dominio farmacéutico. |
+| CE043 | Construcción y experimentación | Evidencia el modelado dimensional, el Data Warehouse/DataMart, el pipeline de ingesta/transformación y el modelo semántico construidos. |
+| CE045 | Comunicación y uso del modelo | Evidencia el dashboard, la visualización, el storytelling y el soporte a la toma de decisiones ejecutivas. |
 
-Fuente oficial de los códigos: [Transcripción de evidencias por competencia — Ingeniería de Software](https://upeuoficial.github.io/planb/transcripcion/#c-area-de-ingenieria-de-software).
+Fuente oficial de los códigos: [Línea de Ciencia de Datos e IA — Competencias y evidencias (CE04)](https://upeuoficial.github.io/planb/lineas/cd-ia/).
 
 ```text
 Problema de negocio -> KPIs -> Modelo dimensional -> DataMart -> Pipeline -> Modelo semántico -> Dashboard -> Decisión
@@ -195,18 +195,18 @@ La presentación puede organizarse con una secuencia breve de apoyo visual. El v
 
 | Orden | Slide o momento | Propósito | Competencia evidenciada |
 |---:|---|---|---|
-| 1 | Título del proyecto y equipo | Identificar el proyecto, integrantes y dominio elegido. | CE024 |
-| 2 | Video pitch o introducción ejecutiva | Presentar problema, solución, valor y participación del equipo. | CE024 |
-| 3 | 1. Problema y alcance | Explicar el problema de negocio y la decisión que se busca apoyar. | CE022 |
-| 4 | KPIs y preguntas analíticas | Presentar indicadores, fórmulas, dimensiones de análisis y criterios de aceptación. | CE022 |
-| 5 | Fuentes y modelo dimensional | Mostrar fuentes, hecho, grano, dimensiones y jerarquías. | CE022 |
-| 6 | Pipeline y DataMart | Explicar ingesta, CDC, transformación, carga y validaciones. | CE022 + CE023 |
-| 7 | Modelo semántico | Presentar relaciones, jerarquías y medidas. | CE022 |
-| 8 | Dashboard | Mostrar visualizaciones, comparativos de periodos, filtros y hallazgos. | CE022 + CE023 |
-| 9 | Demo end-to-end | Evidenciar trazabilidad desde la fuente transaccional hasta el KPI y la recomendación. | CE022 + CE024 |
-| 10 | 4. Aporte individual | Indicar qué hizo cada integrante. | CE024 |
-| 11 | 5. Repositorio y estándares | Mostrar repositorio, topics, estructura, documentación publicada en MkDocs o equivalente, y reproducibilidad. | CE024 |
-| 12 | Limitaciones y mejoras | Reconocer límites del análisis y mejoras posibles. | CE024 |
+| 1 | Título del proyecto y equipo | Identificar el proyecto, integrantes y dominio elegido. | CE045 |
+| 2 | Video pitch o introducción ejecutiva | Presentar problema, solución, valor y participación del equipo. | CE045 |
+| 3 | 1. Problema y alcance | Explicar el problema de negocio y la decisión que se busca apoyar. | CE041 |
+| 4 | KPIs y preguntas analíticas | Presentar indicadores, fórmulas, dimensiones de análisis y criterios de aceptación. | CE041 |
+| 5 | Fuentes y modelo dimensional | Mostrar fuentes, hecho, grano, dimensiones y jerarquías. | CE041 + CE043 |
+| 6 | Pipeline y DataMart | Explicar ingesta, CDC, transformación, carga y validaciones. | CE043 |
+| 7 | Modelo semántico | Presentar relaciones, jerarquías y medidas. | CE043 |
+| 8 | Dashboard | Mostrar visualizaciones, comparativos de periodos, filtros y hallazgos. | CE045 |
+| 9 | Demo end-to-end | Evidenciar trazabilidad desde la fuente transaccional hasta el KPI y la recomendación. | CE043 + CE045 |
+| 10 | 4. Aporte individual | Indicar qué hizo cada integrante. | CE045 |
+| 11 | 5. Repositorio y estándares | Mostrar repositorio, topics, estructura, documentación publicada en MkDocs o equivalente, y reproducibilidad. | CE045 |
+| 12 | Limitaciones y mejoras | Reconocer límites del análisis y mejoras posibles. | CE045 |
 
 ## Anexo. Plantilla mínima de documentación MkDocs o equivalente
 
@@ -235,7 +235,7 @@ El informe debe documentar el producto de manera breve, verificable y alineada a
 |---|---|---|
 | Portada | Nombre del proyecto, curso, sección, integrantes, docente y semestre. | Datos completos del equipo. |
 | Resumen del proyecto | Problema de negocio, solución BI y valor para la decisión. | Síntesis de 8 a 12 líneas. |
-| Competencia y alcance | Competencia/capacidad del proyecto y competencias relacionadas. | CE022, CE023 y CE024 vinculadas al producto. |
+| Competencia y alcance | Competencia/capacidad del proyecto y competencias relacionadas. | CE041, CE043 y CE045 vinculadas al producto. |
 | Problema y KPIs | Necesidad de decisión, preguntas, KPIs y criterios de aceptación. | Tabla de KPIs, fórmulas y preguntas. |
 | Fuentes y calidad de datos | Origen de datos, estructura, validaciones y limitaciones. | Diccionario, perfilado o evidencias de calidad. |
 | Modelo dimensional | Hecho, grano, dimensiones, jerarquías y trazabilidad. | Diagrama o tabla dimensional. |
