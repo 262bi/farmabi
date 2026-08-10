@@ -1,5 +1,7 @@
-site_name: farmabi - Business Intelligence
+site_name: Inteligencia de Negocios
 site_description: Documentacion del proyecto BI farmabi
+repo_url: https://github.com/262bi/farmabi
+repo_name: 262bi/farmabi
 docs_dir: docs
 
 nav:
