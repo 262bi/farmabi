@@ -1,0 +1,2279 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentacion del proyecto BI farmabi">
+      
+      
+      
+      
+        <link rel="prev" href="../../silabo_bi_2026_2/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>S1 - Fundamentos BI y problema de negocio - farmabi - Business Intelligence</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#s1-fundamentos-bi-y-problema-de-negocio" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="farmabi - Business Intelligence" class="md-header__button md-logo" aria-label="farmabi - Business Intelligence" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            farmabi - Business Intelligence
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              S1 - Fundamentos BI y problema de negocio
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="farmabi - Business Intelligence" class="md-nav__button md-logo" aria-label="farmabi - Business Intelligence" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    farmabi - Business Intelligence
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía de Proyecto Sello
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Guía de Proyecto Sello
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../proyecto-sello/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Guía del proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Silabos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Silabos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../silabo_bi_2026_1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Silabo 2026-1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../silabo_bi_2026_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Silabo 2026-2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. Definición del sistema de información para ejecutivos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1. Definición del sistema de información para ejecutivos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S1 - Fundamentos BI y problema de negocio
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    S1 - Fundamentos BI y problema de negocio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Contexto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-indice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Índice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-proposito-de-aprendizaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Propósito de aprendizaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-producto-de-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Producto de sesión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Metodología
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-motivacion-de-la-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Motivación de la sesión
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6 Motivación de la sesión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-caso-farmacia-con-ventas-pedidos-y-despacho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.1 Caso: farmacia con ventas, pedidos y despacho
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-ubicacion-en-el-curso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Ubicación en el curso
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-explica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Explica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Explica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-problema-de-negocio-y-ciclo-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Problema de negocio y ciclo BI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Problema de negocio y ciclo BI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-conceptos-clave-de-la-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1 Conceptos clave de la sesión
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-del-negocio-a-los-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Del negocio a los datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-del-dato-al-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Del dato al insight
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Del dato al insight">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-niveles-de-analitica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.1 Niveles de analítica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-del-insight-a-la-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Del insight a la decisión
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-aplica-actividad-practica-guiada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Aplica: actividad práctica guiada
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Aplica: actividad práctica guiada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-reconocer-el-flujo-del-laboratorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Reconocer el flujo del laboratorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-identificar-decisiones-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Identificar decisiones de negocio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-formular-preguntas-analiticas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Formular preguntas analíticas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-mapear-preguntas-a-fuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Mapear preguntas a fuentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-definir-el-alcance-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Definir el alcance inicial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-construir-la-tabla-negocio-datos-insight-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Construir la tabla Negocio-Datos-Insight-Decisión
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-crea-actividad-autonoma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Crea: actividad autónoma
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Crea: actividad autónoma">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-plantilla-de-evidencia-individual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Plantilla de evidencia individual
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Plantilla de evidencia individual">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411-datos-del-estudiante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1 Datos del estudiante
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-trabajo-autonomo-realizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.2 Trabajo autónomo realizado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-evidencia-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.3 Evidencia técnica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#414-error-o-hallazgo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.4 Error o hallazgo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#415-reflexion-tecnica-breve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.5 Reflexión técnica breve
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-criterios-minimos-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Criterios mínimos de aceptación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-cierre-evaluativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Cierre evaluativo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Cierre evaluativo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-resultados-esperados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Resultados esperados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-evidencia-del-producto-de-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Evidencia del producto de sesión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-preguntas-de-defensa-y-reflexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Preguntas de defensa y reflexión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-rubrica-de-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Rúbrica de evaluación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introducción
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Contexto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-indice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Índice
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-proposito-de-aprendizaje" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Propósito de aprendizaje
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-producto-de-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Producto de sesión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-metodologia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Metodología
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-motivacion-de-la-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Motivación de la sesión
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6 Motivación de la sesión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-caso-farmacia-con-ventas-pedidos-y-despacho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6.1 Caso: farmacia con ventas, pedidos y despacho
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-ubicacion-en-el-curso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Ubicación en el curso
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-explica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Explica
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Explica">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-problema-de-negocio-y-ciclo-bi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Problema de negocio y ciclo BI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Problema de negocio y ciclo BI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-conceptos-clave-de-la-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1 Conceptos clave de la sesión
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-del-negocio-a-los-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Del negocio a los datos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-del-dato-al-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Del dato al insight
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Del dato al insight">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-niveles-de-analitica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3.1 Niveles de analítica
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-del-insight-a-la-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Del insight a la decisión
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-aplica-actividad-practica-guiada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Aplica: actividad práctica guiada
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Aplica: actividad práctica guiada">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-reconocer-el-flujo-del-laboratorio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Reconocer el flujo del laboratorio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-identificar-decisiones-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Identificar decisiones de negocio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-formular-preguntas-analiticas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Formular preguntas analíticas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-mapear-preguntas-a-fuentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Mapear preguntas a fuentes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-definir-el-alcance-inicial" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Definir el alcance inicial
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-construir-la-tabla-negocio-datos-insight-decision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Construir la tabla Negocio-Datos-Insight-Decisión
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-crea-actividad-autonoma" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Crea: actividad autónoma
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Crea: actividad autónoma">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-plantilla-de-evidencia-individual" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Plantilla de evidencia individual
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Plantilla de evidencia individual">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411-datos-del-estudiante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1 Datos del estudiante
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-trabajo-autonomo-realizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.2 Trabajo autónomo realizado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-evidencia-tecnica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.3 Evidencia técnica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#414-error-o-hallazgo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.4 Error o hallazgo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#415-reflexion-tecnica-breve" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.5 Reflexión técnica breve
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-criterios-minimos-de-aceptacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Criterios mínimos de aceptación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-cierre-evaluativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Cierre evaluativo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Cierre evaluativo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-resultados-esperados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Resultados esperados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-evidencia-del-producto-de-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Evidencia del producto de sesión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-preguntas-de-defensa-y-reflexion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Preguntas de defensa y reflexión
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54-rubrica-de-evaluacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Rúbrica de evaluación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="s1-fundamentos-bi-y-problema-de-negocio">S1 - Fundamentos BI y problema de negocio</h1>
+<h2 id="1-introduccion">1. Introducción</h2>
+<p>Tiempo: 20 min.</p>
+<h3 id="11-contexto">1.1 Contexto</h3>
+<p>Una solución de Business Intelligence no empieza en Power BI. Empieza con una decisión de negocio que necesita mejor información para tomarse. Esta sesión construye ese punto de partida: el caso de negocio BI de <code>farmabi</code>, delimitando el problema, los actores, las decisiones esperadas y las preguntas analíticas que guiarán todo el curso.</p>
+<h3 id="12-indice">1.2 Índice</h3>
+<ol>
+<li>Problema de negocio y ciclo BI.</li>
+<li>Del negocio a los datos.</li>
+<li>Del dato al insight.</li>
+<li>Del insight a la decisión.</li>
+</ol>
+<h3 id="13-proposito-de-aprendizaje">1.3 Propósito de aprendizaje</h3>
+<p>Al concluir la clase, estarás en condiciones de:</p>
+<ul>
+<li><strong>Identificar</strong> el ciclo de Inteligencia de Negocios y reconocer los componentes de una arquitectura BI.</li>
+<li><strong>Analizar</strong> el caso organizacional <code>farmabi</code> para identificar decisiones ejecutivas soportadas por datos, actores, preguntas analíticas, fuentes de datos y primeras evidencias disponibles en el repositorio.</li>
+</ul>
+<h3 id="14-producto-de-sesion">1.4 Producto de sesión</h3>
+<p>Caso de negocio BI delimitado para <code>farmabi</code>, con decisiones esperadas, actores, preguntas analíticas iniciales, fuentes de datos y primer mapa del flujo de datos.</p>
+<h3 id="15-metodologia">1.5 Metodología</h3>
+<table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Actividades</th>
+<th>Orientaciones</th>
+<th>Material</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Revisión previa individual</td>
+<td>Leer el sílabo de la Unidad 1 y el caso de la farmacia con ventas, pedidos y despacho (ver 1.6).</td>
+<td>Trabajo individual, antes de clase; sin instalación previa requerida para esta sesión.</td>
+<td>Sílabo BI U1.</td>
+</tr>
+<tr>
+<td>Clase presencial</td>
+<td>Construcción guiada del caso de negocio BI: flujo del laboratorio, decisiones, preguntas analíticas, mapeo a fuentes y tabla Negocio-Datos-Insight-Decisión.</td>
+<td>Trabajo individual, siguiendo al docente paso a paso; consulta inmediata ante dudas sobre el dominio farmacéutico o las tablas del repositorio.</td>
+<td>Pasos 3.1 a 3.6 de esta guía.</td>
+</tr>
+<tr>
+<td>Evaluación formativa</td>
+<td>Revisión en clase del alcance BI delimitado por cada estudiante o equipo.</td>
+<td>La evidencia se completa y sustenta de forma individual, fuera del aula, según los criterios mínimos de la sección 4.2.</td>
+<td>Plantilla de evidencia individual (4.1), rúbrica de evaluación (5.4).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="16-motivacion-de-la-sesion">1.6 Motivación de la sesión</h3>
+<h4 id="161-caso-farmacia-con-ventas-pedidos-y-despacho">1.6.1 Caso: farmacia con ventas, pedidos y despacho</h4>
+<p>Una cadena de farmacia registra clientes, vendedores, productos, categorías, familias, pedidos y detalles de pedido en una base transaccional. La gerencia necesita responder preguntas como:</p>
+<ul>
+<li>¿Cuánto vendemos realmente después de descuentos?</li>
+<li>¿Qué productos, familias o categorías aportan más margen?</li>
+<li>¿Qué vendedores o clientes concentran ventas?</li>
+<li>¿Qué pedidos tardan más en confirmarse, despacharse o entregarse?</li>
+<li>¿Cómo evolucionan ventas, margen y descuentos en el tiempo?</li>
+</ul>
+<p>El problema no es solo tener datos. El reto BI es convertir esos datos operacionales en información confiable para tomar decisiones.</p>
+<p>Pregunta guía:</p>
+<div class="highlight"><pre><span></span><code>¿Qué decisión de negocio queremos mejorar y qué datos necesitamos para sostenerla?
+</code></pre></div>
+<p>Preguntas para los estudiantes:</p>
+<ol>
+<li>¿Qué problemas genera tomar decisiones sin datos confiables en este caso?</li>
+<li>¿Por qué el reto de BI no es solo "tener datos" sino convertirlos en información confiable?</li>
+<li>¿Qué decisión priorizarías primero si fueras el gerente comercial de la farmacia?</li>
+</ol>
+<h3 id="17-ubicacion-en-el-curso">1.7 Ubicación en el curso</h3>
+<ul>
+<li>Unidad: U1 - Definición del sistema de información para ejecutivos.</li>
+<li>Producto de unidad: diseño funcional y analítico de la solución BI.</li>
+<li>Producto del curso: Proyecto Sello: solución BI end-to-end para toma de decisiones, con origen transaccional, Data Warehouse/DataMart, pipeline de ingesta y transformación, modelo semántico, dashboard interactivo, validación de KPIs, trazabilidad y sustentación técnica.</li>
+<li>Avance del producto en esta sesión: problema de negocio, actores, decisiones y preguntas analíticas iniciales.</li>
+</ul>
+<p>Roadmap del producto BI:</p>
+<pre class="mermaid"><code>flowchart TB
+    Negocio["Problema de negocio&lt;br/&gt;HOY"]
+    Requerimientos["Requerimientos analíticos&lt;br/&gt;S2"]
+    Modelo["Modelo dimensional&lt;br/&gt;S3"]
+    Blueprint["Mockup y diseño BI&lt;br/&gt;S4"]
+    DW["DataMart / DW&lt;br/&gt;U2"]
+    PowerBI["Dashboard Power BI&lt;br/&gt;U2-U3"]
+    Decision["Decisión ejecutiva&lt;br/&gt;Producto final"]
+
+    Negocio --&gt; Requerimientos --&gt; Modelo --&gt; Blueprint --&gt; DW --&gt; PowerBI --&gt; Decision
+
+    classDef today fill:#ffe08a,stroke:#9a6b00,stroke-width:2px,color:#111;
+    class Negocio today;</code></pre>
+<p>Hoy se delimita el primer componente real de la U1: el caso de negocio BI. En las siguientes sesiones se agregan requerimientos analíticos con KPIs, modelado dimensional y el mockup del dashboard. La evaluación U1 valida el diseño funcional y analítico completo construido con esos componentes.</p>
+<h2 id="2-explica">2. Explica</h2>
+<p>Tiempo: 15 min.</p>
+<h3 id="21-problema-de-negocio-y-ciclo-bi">2.1 Problema de negocio y ciclo BI</h3>
+<p>Las decisiones son acciones que se toman para resolver un problema: evitar o reducir efectos negativos, aprovechar oportunidades, eliminar debilidades o potenciar fortalezas. Herbert A. Simon distingue dos tipos de decisiones:</p>
+<ul>
+<li><strong>Programadas</strong>: rutinarias y repetitivas, se toman con reglas o procedimientos predefinidos; situaciones bien estructuradas, automatizables.</li>
+<li><strong>No programadas</strong>: complejas, sin reglas predefinidas; situaciones no estructuradas que requieren juicio experto.</li>
+</ul>
+<p>Y describe 4 fases para resolver un problema:</p>
+<table>
+<thead>
+<tr>
+<th>Fase</th>
+<th>Pregunta que responde</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Inteligencia</td>
+<td>¿Cuál es el problema?</td>
+<td>Buscar situaciones insatisfechas que exigen una solución.</td>
+</tr>
+<tr>
+<td>2. Diseño</td>
+<td>¿Qué opciones tengo?</td>
+<td>Generar alternativas de solución.</td>
+</tr>
+<tr>
+<td>3. Selección</td>
+<td>¿Qué opción voy a elegir?</td>
+<td>Seleccionar una solución.</td>
+</tr>
+<tr>
+<td>4. Revisión</td>
+<td>¿Qué consecuencias tuvo mi decisión?</td>
+<td>Evaluar la solución realizada.</td>
+</tr>
+</tbody>
+</table>
+<p>Business Intelligence no empieza en Power BI. Empieza con un <strong>problema de negocio</strong>: una situación real que exige tomar una decisión mejor informada (fase 1, Inteligencia). BI existe para dar soporte informado sobre todo a esa primera fase y a la última (Revisión: evaluar con datos qué consecuencias tuvo la decisión).</p>
+<p>BI es el proceso de transformar datos en información, información en conocimiento y conocimiento en decisiones. El <strong>ciclo BI</strong> resume ese proceso:</p>
+<div class="highlight"><pre><span></span><code>negocio -&gt; datos -&gt; insight -&gt; decisión
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Etapa</th>
+<th>Pregunta que responde</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Negocio</td>
+<td>¿Qué decisión necesitamos mejorar?</td>
+</tr>
+<tr>
+<td>Datos</td>
+<td>¿Qué información real respalda esa decisión?</td>
+</tr>
+<tr>
+<td>Insight</td>
+<td>¿Qué patrón o comparación hace legible ese dato?</td>
+</tr>
+<tr>
+<td>Decisión</td>
+<td>¿Qué acción concreta se toma con ese insight?</td>
+</tr>
+</tbody>
+</table>
+<p>Ejemplo general del ciclo: Negocio = las ventas han disminuido en una categoría de productos; Datos = ventas por producto, fecha, tienda, cliente y categoría; Insight = la categoría baja más en determinadas fechas o zonas; Decisión = lanzar promoción, cambiar estrategia comercial o ajustar inventario.</p>
+<p>En <code>farmabi</code>, el ciclo completo del curso se implementa así (S1 solo trabaja la primera etapa; el resto se construye en las siguientes sesiones):</p>
+<pre class="mermaid"><code>flowchart LR
+    Negocio["Gerencia farmacia&lt;br/&gt;ventas y operaciones"]
+    OLTP["MySQL OLTP&lt;br/&gt;farma_oltp_db"]
+    DW["PostgreSQL DW&lt;br/&gt;raw / staging / marts"]
+    Modelo["Modelo estrella&lt;br/&gt;fact_ventas + dim_*"]
+    BI["Power BI&lt;br/&gt;KPIs y dashboard"]
+    Decision["Decisión&lt;br/&gt;comercial y operativa"]
+
+    Negocio --&gt; OLTP --&gt; DW --&gt; Modelo --&gt; BI --&gt; Decision</code></pre>
+<h4 id="211-conceptos-clave-de-la-sesion">2.1.1 Conceptos clave de la sesión</h4>
+<table>
+<thead>
+<tr>
+<th>Concepto</th>
+<th>Sentido en el curso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Problema de negocio</td>
+<td>Situación que requiere una decisión mejor informada.</td>
+</tr>
+<tr>
+<td>KPI</td>
+<td>Indicador clave de desempeño que ayuda a evaluar resultados relevantes del negocio.</td>
+</tr>
+<tr>
+<td>Métrica</td>
+<td>Valor medible asociado a una actividad o proceso.</td>
+</tr>
+<tr>
+<td>Pregunta analítica</td>
+<td>Pregunta que puede responderse con datos.</td>
+</tr>
+<tr>
+<td>Fuente operacional</td>
+<td>Sistema donde nacen los datos del negocio.</td>
+</tr>
+<tr>
+<td>Data Warehouse</td>
+<td>Repositorio analítico centralizado para integrar información.</td>
+</tr>
+<tr>
+<td>DataMart</td>
+<td>Subconjunto del Data Warehouse orientado a un área o proceso específico.</td>
+</tr>
+<tr>
+<td>Insight</td>
+<td>Hallazgo relevante que orienta la decisión.</td>
+</tr>
+<tr>
+<td>Dashboard</td>
+<td>Visualización interactiva para interpretar indicadores y resultados.</td>
+</tr>
+<tr>
+<td>Consumo ejecutivo</td>
+<td>Forma en que el usuario final explora KPIs y hallazgos.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-del-negocio-a-los-datos">2.2 Del negocio a los datos</h3>
+<p>Una vez identificada la decisión que se quiere mejorar, el siguiente paso del ciclo BI es ubicar qué datos reales pueden respaldarla. Esto exige reconocer dónde nace cada dato: la <strong>fuente operacional</strong>.</p>
+<p>En <code>farmabi</code>, la fuente operacional es una base transaccional MySQL (<code>farma_oltp_db</code>) que registra la operación diaria de una cadena de farmacia:</p>
+<table>
+<thead>
+<tr>
+<th>Tabla OLTP</th>
+<th>Uso analítico probable</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>clientes</code></td>
+<td>Análisis por cliente.</td>
+</tr>
+<tr>
+<td><code>vendedores</code></td>
+<td>Análisis comercial por vendedor.</td>
+</tr>
+<tr>
+<td><code>familias</code>, <code>categorias</code>, <code>productos</code></td>
+<td>Análisis de producto.</td>
+</tr>
+<tr>
+<td><code>pedidos</code></td>
+<td>Estado, fechas y ciclo operativo.</td>
+</tr>
+<tr>
+<td><code>pedido_detalles</code></td>
+<td>Cantidades, precios, descuentos, costos y venta.</td>
+</tr>
+</tbody>
+</table>
+<p>El repositorio ya contiene el laboratorio completo que este flujo va a usar durante el curso, aunque en S1 solo se explora la fuente operacional:</p>
+<table>
+<thead>
+<tr>
+<th>Carpeta o archivo</th>
+<th>Rol en el caso BI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>oltp-mysql/</code></td>
+<td>Base transaccional MySQL <code>farma_oltp_db</code> (ya construida y operativa desde S1).</td>
+</tr>
+<tr>
+<td><code>dw-pg/</code></td>
+<td>PostgreSQL analítico <code>farmabi_dw</code> (se construye en U2).</td>
+</tr>
+<tr>
+<td><code>ingesta-debezium/</code></td>
+<td>Ingesta CDC con Debezium + Kafka (U2).</td>
+</tr>
+<tr>
+<td><code>ingesta-airbyte/</code></td>
+<td>Variante batch/configurada de ingesta (U2).</td>
+</tr>
+<tr>
+<td><code>dw-dbt/</code></td>
+<td>Transformación hacia <code>staging</code> y <code>marts</code> (U2).</td>
+</tr>
+<tr>
+<td><code>powerbi/</code></td>
+<td>Medidas DAX, PBIX y reportes (U2-U3).</td>
+</tr>
+</tbody>
+</table>
+<p>Ir del negocio a los datos no es solo "conectar una base": es verificar que existen los campos correctos para responder la pregunta. Por ejemplo, para saber si un pedido se entrega a tiempo se necesitan <code>pedidos.fecha_creacion</code> y <code>pedidos.fecha_entrega</code>; para calcular una venta neta se necesitan <code>pedido_detalles.cantidad</code>, <code>precio_venta_unitario</code> y <code>total_descuento_unitario</code>.</p>
+<h3 id="23-del-dato-al-insight">2.3 Del dato al insight</h3>
+<p>Una arquitectura BI conecta tres niveles de sistemas: los <strong>sistemas transaccionales (TPS)</strong> donde nace el dato operativo (en <code>farmabi</code>, <code>farma_oltp_db</code>), los <strong>sistemas de apoyo a la toma de decisiones (DSS)</strong> que lo transforman en KPIs, y los <strong>sistemas de información para ejecutivos (EIS)</strong> que lo presentan como dashboard. Data Analytics es la habilidad de transformar datos en reportes interactivos de apoyo a la decisión: el dato describe una situación actual; el insight compara esa situación con lo esperado y revela un patrón accionable.</p>
+<p>Ejemplo: <em>"La caída de ventas en zapatos está asociada a quiebres de stock, lo que está afectando la rentabilidad"</em> es un insight porque conecta un hallazgo (caída de ventas) con una causa (quiebre de stock) y un impacto (rentabilidad) — no es un dato suelto, es una interpretación accionable.</p>
+<p>Un dato aislado no es un insight. <code>total_descuento_unitario = 1.00</code> en una fila de <code>pedido_detalles</code> no le dice nada a un gerente. Un <strong>insight</strong> aparece cuando ese dato se agrega, se compara o se pone en contexto de forma que alguien pueda leerlo y actuar:</p>
+<table>
+<thead>
+<tr>
+<th>Solo dato</th>
+<th>Insight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pedido_detalles.total_descuento_unitario = 1.00</code> en una fila</td>
+<td>"Los descuentos representan el 8% del margen de la familia TABLETA este mes."</td>
+</tr>
+<tr>
+<td><code>pedidos.fecha_entrega</code> de un pedido</td>
+<td>"El 30% de los pedidos de la vendedora X tarda más de 48 horas en entregarse."</td>
+</tr>
+<tr>
+<td><code>productos.precio_venta</code> de un producto</td>
+<td>"Los productos de la familia INYECTABLE generan el doble de margen que TABLETA."</td>
+</tr>
+</tbody>
+</table>
+<p>Convertir dato en insight requiere tres operaciones típicas: <strong>agregar</strong> (sumar, promediar, contar), <strong>comparar</strong> (contra un periodo, un vendedor, una categoría) y <strong>contextualizar</strong> (relacionar el número con un objetivo o umbral de negocio). Esa transformación se automatiza recién en U2 (SQL manual en S6, herramientas de ingesta y transformación en S7-S9); en S1 se practica de forma manual y conceptual al formular las preguntas analíticas de la sección 3.3.</p>
+<h4 id="231-niveles-de-analitica">2.3.1 Niveles de analítica</h4>
+<p>No todo insight tiene la misma profundidad. Existen cuatro niveles de analítica, de menor a mayor complejidad:</p>
+<table>
+<thead>
+<tr>
+<th>Nivel</th>
+<th>Qué hace</th>
+<th>Pregunta de análisis (ejemplo)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Analítica descriptiva</td>
+<td>El pasado (descriptivo).</td>
+<td>¿Cuál fue la utilidad generada por los productos vendidos en el último año?</td>
+</tr>
+<tr>
+<td>Analítica de diagnóstico</td>
+<td>Establece hipótesis (relacional y/o explicativo de la causalidad).</td>
+<td>¿Por qué las ventas de noviembre fueron menores que las de octubre? (explicativo)</td>
+</tr>
+<tr>
+<td>Analítica predictiva</td>
+<td>Estima el valor de una variable desconocida a partir de datos pasados (predictivo).</td>
+<td>¿Cuánto consumirá un cliente en su próxima visita?</td>
+</tr>
+<tr>
+<td>Analítica prescriptiva</td>
+<td>Recomendaciones o tratamiento (aplicada).</td>
+<td>Ofrecerle un combo u oferta personalizado a partir de esa predicción.</td>
+</tr>
+</tbody>
+</table>
+<p>En <code>farmabi</code>, el curso trabaja principalmente <strong>analítica descriptiva y de diagnóstico</strong> (KPIs, comparativos de periodos, causas de variación) hasta la Unidad 3. Predictiva y prescriptiva quedan fuera del alcance del curso, pero conviene reconocer los cuatro niveles desde S1 para ubicar qué tipo de pregunta analítica se está formulando en cada caso.</p>
+<h3 id="24-del-insight-a-la-decision">2.4 Del insight a la decisión</h3>
+<p>Un insight solo tiene valor si llega a la persona correcta, en el momento correcto, y cambia lo que esa persona hace. Si nadie actúa sobre "los descuentos representan el 8% del margen", el insight fue inútil.</p>
+<p>Errores frecuentes que rompen este último paso del ciclo:</p>
+<table>
+<thead>
+<tr>
+<th>Problema</th>
+<th>Riesgo</th>
+<th>Corrección</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Empezar por gráficos</td>
+<td>Dashboard bonito sin decisión clara.</td>
+<td>Definir decisión y pregunta primero.</td>
+</tr>
+<tr>
+<td>Confundir dato con KPI</td>
+<td>Medidas sin acción.</td>
+<td>Relacionar cada KPI con un objetivo.</td>
+</tr>
+<tr>
+<td>Pedir todos los datos</td>
+<td>Alcance inmanejable.</td>
+<td>Priorizar un proceso de negocio.</td>
+</tr>
+<tr>
+<td>No definir usuario</td>
+<td>Visualizaciones genéricas.</td>
+<td>Identificar al actor ejecutivo.</td>
+</tr>
+<tr>
+<td>No mapear fuentes</td>
+<td>No hay trazabilidad.</td>
+<td>Vincular cada pregunta con tabla/campo.</td>
+</tr>
+</tbody>
+</table>
+<p>Por eso el ciclo BI se recorre completo desde S1: sin un actor identificado y una decisión priorizada (negocio), no importa qué tan bien se transformen los datos (datos) ni qué tan claro sea el hallazgo (insight) — nunca se llega a una decisión real.</p>
+<h2 id="3-aplica-actividad-practica-guiada">3. Aplica: actividad práctica guiada</h2>
+<p>Tiempo: 3h.</p>
+<p>El docente guía la lectura del caso <code>farmabi</code> y los estudiantes construyen el primer documento de definición BI.</p>
+<p>Hoja de ruta de la sesión práctica:</p>
+<ul>
+<li>3.1 Reconocer el flujo del laboratorio.</li>
+<li>3.2 Identificar decisiones de negocio.</li>
+<li>3.3 Formular preguntas analíticas.</li>
+<li>3.4 Mapear preguntas a fuentes.</li>
+<li>3.5 Definir el alcance inicial.</li>
+<li>3.6 Construir la tabla Negocio-Datos-Insight-Decisión.</li>
+</ul>
+<h3 id="31-reconocer-el-flujo-del-laboratorio">3.1 Reconocer el flujo del laboratorio</h3>
+<p><strong>Producto del paso:</strong> mapa simple del flujo de datos del curso.</p>
+<p>Lee la arquitectura del repositorio y registra el flujo base:</p>
+<div class="highlight"><pre><span></span><code>MySQL OLTP -&gt; Debezium/Kafka o Airbyte -&gt; PostgreSQL RAW -&gt; dbt -&gt; marts -&gt; Power BI
+</code></pre></div>
+<p>Responde:</p>
+<ol>
+<li>¿Dónde nacen los datos?</li>
+<li>¿Dónde aterrizan los datos crudos?</li>
+<li>¿Dónde se transforma el modelo analítico?</li>
+<li>¿Qué consume Power BI?</li>
+</ol>
+<h3 id="32-identificar-decisiones-de-negocio">3.2 Identificar decisiones de negocio</h3>
+<p><strong>Producto del paso:</strong> lista priorizada de decisiones ejecutivas.</p>
+<p>Propón al menos cinco decisiones posibles. Ejemplos:</p>
+<table>
+<thead>
+<tr>
+<th>Decisión</th>
+<th>Actor</th>
+<th>Frecuencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Priorizar categorías con mayor margen</td>
+<td>Gerencia comercial</td>
+<td>Semanal</td>
+</tr>
+<tr>
+<td>Evaluar cumplimiento de ventas</td>
+<td>Jefatura comercial</td>
+<td>Mensual</td>
+</tr>
+<tr>
+<td>Detectar pedidos con lead time alto</td>
+<td>Operaciones</td>
+<td>Diario</td>
+</tr>
+<tr>
+<td>Revisar descuentos excesivos</td>
+<td>Finanzas / comercial</td>
+<td>Semanal</td>
+</tr>
+<tr>
+<td>Identificar clientes de mayor valor</td>
+<td>Gerencia</td>
+<td>Mensual</td>
+</tr>
+</tbody>
+</table>
+<p>Selecciona una decisión principal para el proyecto del equipo.</p>
+<h3 id="33-formular-preguntas-analiticas">3.3 Formular preguntas analíticas</h3>
+<p><strong>Producto del paso:</strong> banco inicial de preguntas BI.</p>
+<p>Cada pregunta debe poder responderse con datos del caso.</p>
+<p>Ejemplos:</p>
+<ol>
+<li>¿Cuál es la venta neta mensual y su variación contra el periodo anterior?</li>
+<li>¿Qué familias de producto generan mayor margen bruto?</li>
+<li>¿Qué vendedores concentran mayor venta neta?</li>
+<li>¿Qué porcentaje de pedidos se entrega dentro de 24 horas?</li>
+<li>¿Cuál es el ticket promedio por cliente o categoría?</li>
+</ol>
+<h3 id="34-mapear-preguntas-a-fuentes">3.4 Mapear preguntas a fuentes</h3>
+<p><strong>Producto del paso:</strong> matriz pregunta-fuente.</p>
+<table>
+<thead>
+<tr>
+<th>Pregunta</th>
+<th>Tablas fuente</th>
+<th>Campos candidatos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Venta neta mensual</td>
+<td><code>pedidos</code>, <code>pedido_detalles</code></td>
+<td><code>fecha_creacion</code>, <code>cantidad</code>, <code>precio_venta_unitario</code>, <code>total_descuento_unitario</code></td>
+</tr>
+<tr>
+<td>Margen por familia</td>
+<td><code>pedido_detalles</code>, <code>productos</code>, <code>familias</code></td>
+<td><code>precio_venta_unitario</code>, <code>precio_compra_unitario</code>, <code>familia_id</code></td>
+</tr>
+<tr>
+<td>Lead time de entrega</td>
+<td><code>pedidos</code></td>
+<td><code>fecha_creacion</code>, <code>fecha_entrega</code></td>
+</tr>
+<tr>
+<td>Descuento aplicado</td>
+<td><code>pedido_detalles</code></td>
+<td><code>total_descuento_unitario</code>, <code>precio_venta_unitario</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="35-definir-el-alcance-inicial">3.5 Definir el alcance inicial</h3>
+<p><strong>Producto del paso:</strong> alcance BI de S1.</p>
+<p>Completa:</p>
+<div class="highlight"><pre><span></span><code>Proceso de negocio principal:
+Decisión que se desea mejorar:
+Usuario ejecutivo principal:
+Preguntas analíticas priorizadas:
+Fuentes disponibles:
+Fuentes no disponibles o supuestos:
+Riesgos de calidad de datos:
+</code></pre></div>
+<h3 id="36-construir-la-tabla-negocio-datos-insight-decision">3.6 Construir la tabla Negocio-Datos-Insight-Decisión</h3>
+<p><strong>Producto del paso:</strong> tabla consolidada del ciclo BI aplicado a <code>farmabi</code>.</p>
+<p>El docente modela primero un ejemplo con el caso <code>farmabi</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Negocio</th>
+<th>Datos</th>
+<th>Insight</th>
+<th>Decisión</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Caída de rentabilidad en una familia de productos</td>
+<td>Ventas y costos por familia (<code>pedido_detalles</code>, <code>productos</code>, <code>categorias</code>, <code>familias</code>)</td>
+<td>La familia vende bien pero deja poco margen por los descuentos aplicados</td>
+<td>Ajustar precio o renegociar costo con el proveedor</td>
+</tr>
+</tbody>
+</table>
+<p>Luego, toma dos de las decisiones priorizadas en 3.2 y complétalas siguiendo la secuencia completa del ciclo BI:</p>
+<table>
+<thead>
+<tr>
+<th>Negocio</th>
+<th>Datos</th>
+<th>Insight</th>
+<th>Decisión</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tu decisión 1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tu decisión 2</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Este es el mismo esquema Negocio → Datos → Insight → Decisión que vas a aplicar de forma autónoma en la sección 4.</p>
+<h2 id="4-crea-actividad-autonoma">4. Crea: actividad autónoma</h2>
+<p>Tiempo: 4h fuera del aula.</p>
+<h3 id="41-plantilla-de-evidencia-individual">4.1 Plantilla de evidencia individual</h3>
+<p>Entrega un PDF con el siguiente nombre:</p>
+<div class="highlight"><pre><span></span><code>S01_Equipo##_ApellidoNombre.pdf
+</code></pre></div>
+<p>El PDF debe usar esta estructura. La primera sección define el trabajo autónomo; completa las demás con tus evidencias.</p>
+<h4 id="411-datos-del-estudiante">4.1.1 Datos del estudiante</h4>
+<ul>
+<li>Nombre:</li>
+<li>Equipo:</li>
+<li>Sesión: S01 - Fundamentos BI y problema de negocio</li>
+<li>Rol o aporte realizado:</li>
+<li>Link del repositorio:</li>
+</ul>
+<h4 id="412-trabajo-autonomo-realizado">4.1.2 Trabajo autónomo realizado</h4>
+<p>Completa y evidencia estas tareas:</p>
+<ol>
+<li>Decisión de negocio priorizada.</li>
+<li>Actor ejecutivo principal.</li>
+<li>Mínimo cinco preguntas analíticas.</li>
+<li>Matriz pregunta-fuente.</li>
+<li>Tabla Negocio-Datos-Insight-Decisión con al menos dos decisiones completas.</li>
+</ol>
+<h4 id="413-evidencia-tecnica">4.1.3 Evidencia técnica</h4>
+<p>Incluye capturas o extractos con una breve explicación debajo de cada uno:</p>
+<ul>
+<li>Mapa del flujo de datos del laboratorio (3.1).</li>
+<li>Lista de decisiones ejecutivas evaluadas (3.2).</li>
+<li>Banco de preguntas analíticas (3.3).</li>
+<li>Matriz pregunta-fuente (3.4).</li>
+<li>Alcance inicial completo (3.5).</li>
+<li>Tabla Negocio-Datos-Insight-Decisión (3.6).</li>
+</ul>
+<h4 id="414-error-o-hallazgo">4.1.4 Error o hallazgo</h4>
+<p>Describe al menos un riesgo de calidad o trazabilidad detectado en las fuentes del caso:</p>
+<ul>
+<li>Qué ocurrió o qué limitación encontraste.</li>
+<li>Cómo lo identificaste.</li>
+<li>Cómo lo documentaste o qué supuesto tomaste.</li>
+</ul>
+<h4 id="415-reflexion-tecnica-breve">4.1.5 Reflexión técnica breve</h4>
+<p>Responde en 5 a 8 líneas:</p>
+<div class="highlight"><pre><span></span><code>¿Por qué una solución BI debe empezar por una decisión y no por un gráfico?
+</code></pre></div>
+<h3 id="42-criterios-minimos-de-aceptacion">4.2 Criterios mínimos de aceptación</h3>
+<p>La evidencia individual se considera completa si:</p>
+<ul>
+<li>El caso de negocio está delimitado.</li>
+<li>Las preguntas analíticas son medibles.</li>
+<li>Las fuentes pertenecen al repositorio <code>farmabi</code>.</li>
+<li>El documento conecta negocio, datos y decisión.</li>
+<li>La evidencia identifica un aporte individual verificable.</li>
+</ul>
+<h2 id="5-cierre-evaluativo">5. Cierre evaluativo</h2>
+<p>Tiempo: 20 min.</p>
+<p>Esta sección conecta el resultado de aprendizaje de la sesión con el producto que debe evidenciar cada estudiante.</p>
+<h3 id="51-resultados-esperados">5.1 Resultados esperados</h3>
+<p>Al finalizar la sesión, el estudiante debe demostrar que:</p>
+<ul>
+<li>Explica el ciclo BI.</li>
+<li>Identifica el problema de negocio del caso farmacia.</li>
+<li>Distingue fuente operacional, DW, DataMart y dashboard.</li>
+<li>Formula preguntas analíticas verificables.</li>
+<li>Mapea preguntas hacia tablas fuente.</li>
+</ul>
+<h3 id="52-evidencia-del-producto-de-sesion">5.2 Evidencia del producto de sesión</h3>
+<p>Cada estudiante entrega un PDF individual siguiendo la plantilla de la sección 4.1.</p>
+<p>Nombre del archivo:</p>
+<div class="highlight"><pre><span></span><code>S01_Equipo##_ApellidoNombre.pdf
+</code></pre></div>
+<p>La evidencia debe demostrar:</p>
+<ul>
+<li>Caso de negocio BI delimitado.</li>
+<li>Aporte individual verificable.</li>
+<li>Preguntas analíticas y matriz pregunta-fuente completas.</li>
+<li>Reflexión técnica breve.</li>
+</ul>
+<p>La revisión se realiza con los criterios mínimos de aceptación de la sección 4.2 y la rúbrica de la sección 5.4.</p>
+<h3 id="53-preguntas-de-defensa-y-reflexion">5.3 Preguntas de defensa y reflexión</h3>
+<ol>
+<li>¿Qué decisión de negocio guía tu solución BI?</li>
+<li>¿Qué usuario consumirá el dashboard?</li>
+<li>¿Qué pregunta analítica consideras más importante?</li>
+<li>¿Qué tabla fuente respalda esa pregunta?</li>
+<li>¿Qué riesgo aparece si no se define el problema antes del dashboard?</li>
+</ol>
+<h3 id="54-rubrica-de-evaluacion">5.4 Rúbrica de evaluación</h3>
+<table>
+<thead>
+<tr>
+<th>Dimensión</th>
+<th style="text-align: right;">Peso</th>
+<th>3 - Logro destacado</th>
+<th>2 - Logro</th>
+<th>1 - Proceso</th>
+<th>0 - Inicio</th>
+<th style="text-align: right;">Puntuación obtenida</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Problema y decisión</td>
+<td style="text-align: right;">2</td>
+<td>Delimita problema, actor y decisión con claridad ejecutiva.</td>
+<td>Define problema y decisión comprensibles.</td>
+<td>Presenta una idea general sin actor claro.</td>
+<td>No delimita el problema.</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>2. Preguntas analíticas</td>
+<td style="text-align: right;">2</td>
+<td>Formula preguntas medibles, priorizadas y conectadas al negocio.</td>
+<td>Formula preguntas medibles.</td>
+<td>Preguntas vagas o poco medibles.</td>
+<td>No formula preguntas útiles.</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>3. Mapeo a fuentes</td>
+<td style="text-align: right;">2</td>
+<td>Relaciona preguntas con tablas y campos reales del repositorio.</td>
+<td>Relaciona preguntas con tablas reales.</td>
+<td>Mapeo incompleto o genérico.</td>
+<td>No usa fuentes reales.</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>4. Comprensión del ciclo BI</td>
+<td style="text-align: right;">2</td>
+<td>Explica negocio -&gt; datos -&gt; insight -&gt; decisión aplicado a <code>farmabi</code>.</td>
+<td>Explica el ciclo BI de forma correcta.</td>
+<td>Explicación parcial.</td>
+<td>No explica el ciclo.</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>5. Aporte individual</td>
+<td style="text-align: right;">1</td>
+<td>Aporte verificable y bien documentado.</td>
+<td>Aporte identificable.</td>
+<td>Aporte mencionado de forma general.</td>
+<td>Sin aporte individual.</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>6. Orden y reflexión</td>
+<td style="text-align: right;">1</td>
+<td>Evidencia clara, ordenada y reflexión técnica precisa.</td>
+<td>Evidencia comprensible.</td>
+<td>Evidencia desordenada o superficial.</td>
+<td>Sin evidencia suficiente.</td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<p>Puntuación acumulada = suma de (<code>Peso</code> * <code>Puntuación obtenida</code>) = ____.</p>
+<p>Nota final = (<code>Puntuación acumulada</code> / 30) * 20 = ____.</p>
+<p>Para usar la rúbrica con IA, solicita:</p>
+<div class="highlight"><pre><span></span><code>Evalúa el PDF usando la rúbrica de la sesión.
+Para cada dimensión selecciona la puntuación obtenida usando la escala Inicio=0, Proceso=1, Logro=2, Logro destacado=3.
+Justifica brevemente cada puntuación.
+Calcula la puntuación acumulada con la fórmula: suma de (Peso * Puntuación obtenida).
+Calcula la nota final sobre 20 con la fórmula: (Puntuación acumulada / 30) * 20.
+Indica 2 fortalezas y 2 recomendaciones.
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.top", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../../javascripts/mermaid.js"></script>
+      
+    
+  </body>
+</html>
