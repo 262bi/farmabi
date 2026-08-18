@@ -4,7 +4,7 @@
 
 Tiempo: 20 min.
 
-### 1.1 Contexto
+### 1.1 Presentación de la sesión
 
 Una solución de Business Intelligence no empieza en Power BI. Empieza con una decisión de negocio que necesita mejor información para tomarse. Esta sesión construye ese punto de partida: el caso de negocio BI de `farmabi`, delimitando el problema, los actores, las decisiones esperadas y las preguntas analíticas que guiarán todo el curso.
 
@@ -28,11 +28,13 @@ Caso de negocio BI delimitado para `farmabi`, con decisiones esperadas, actores,
 
 ### 1.5 Metodología
 
-| Fase | Actividades | Orientaciones | Material |
-|---|---|---|---|
-| Revisión previa individual | Leer el sílabo de la Unidad 1 y el caso de la farmacia con ventas, pedidos y despacho (ver 1.6). | Trabajo individual, antes de clase; sin instalación previa requerida para esta sesión. | Sílabo BI U1. |
-| Clase presencial | Construcción guiada del caso de negocio BI: flujo del laboratorio, decisiones, preguntas analíticas, mapeo a fuentes y tabla Negocio-Datos-Insight-Decisión. | Trabajo individual, siguiendo al docente paso a paso; consulta inmediata ante dudas sobre el dominio farmacéutico o las tablas del repositorio. | Pasos 3.1 a 3.6 de esta guía. |
-| Evaluación formativa | Revisión en clase del alcance BI delimitado por cada estudiante o equipo. | La evidencia se completa y sustenta de forma individual, fuera del aula, según los criterios mínimos de la sección 4.2. | Plantilla de evidencia individual (4.1), rúbrica de evaluación (5.4). |
+**Tabla 1. Metodología de la sesión**
+
+| Actividades a Realizar en el Periodo | Orientaciones generales (Orientaciones Metodológicas) | Material de estudio recomendado |
+|---|---|---|
+| Revisión previa individual | Leer el sílabo de la Unidad 1 y el caso de la farmacia con ventas, pedidos y despacho (ver 1.6). Trabajo individual, antes de clase; sin instalación previa requerida para esta sesión. | Sílabo BI U1. |
+| Clase presencial | Construcción guiada del caso de negocio BI: flujo del laboratorio, decisiones, preguntas analíticas, mapeo a fuentes y tabla Negocio-Datos-Insight-Decisión. Trabajo individual, siguiendo al docente paso a paso; consulta inmediata ante dudas sobre el dominio farmacéutico o las tablas del repositorio. | Pasos 3.1 a 3.6 de esta guía. |
+| Evaluación formativa | Revisión en clase del alcance BI delimitado por cada estudiante o equipo. La evidencia se completa y sustenta de forma individual, fuera del aula, según los criterios mínimos de la sección 4.2. | Plantilla de evidencia individual (4.1), rúbrica de evaluación (5.4). |
 
 ### 1.6 Motivación de la sesión
 
@@ -54,11 +56,16 @@ Pregunta guía:
 ¿Qué decisión de negocio queremos mejorar y qué datos necesitamos para sostenerla?
 ```
 
-Preguntas para los estudiantes:
+**Preguntas de análisis**
+
+**Activación de conocimientos previos**
 
 1. ¿Qué problemas genera tomar decisiones sin datos confiables en este caso?
-2. ¿Por qué el reto de BI no es solo "tener datos" sino convertirlos en información confiable?
-3. ¿Qué decisión priorizarías primero si fueras el gerente comercial de la farmacia?
+2. ¿Qué decisión priorizarías primero si fueras el gerente comercial de la farmacia?
+
+**Comprensión del ciclo BI**
+
+1. ¿Por qué el reto de BI no es solo "tener datos" sino convertirlos en información confiable?
 
 ### 1.7 Ubicación en el curso
 
@@ -68,6 +75,8 @@ Preguntas para los estudiantes:
 - Avance del producto en esta sesión: problema de negocio, actores, decisiones y preguntas analíticas iniciales.
 
 Roadmap del producto BI:
+
+**Figura 1. Roadmap del producto BI de `farmabi`**
 
 ```mermaid
 flowchart TB
@@ -100,6 +109,8 @@ Las decisiones son acciones que se toman para resolver un problema: evitar o red
 
 Y describe 4 fases para resolver un problema:
 
+**Tabla 2. Fases para resolver un problema según Herbert Simon**
+
 | Fase | Pregunta que responde | Descripción |
 |---|---|---|
 | 1. Inteligencia | ¿Cuál es el problema? | Buscar situaciones insatisfechas que exigen una solución. |
@@ -115,6 +126,8 @@ BI es el proceso de transformar datos en información, información en conocimie
 negocio -> datos -> insight -> decisión
 ```
 
+**Tabla 3. Etapas del ciclo BI**
+
 | Etapa | Pregunta que responde |
 |---|---|
 | Negocio | ¿Qué decisión necesitamos mejorar? |
@@ -125,6 +138,8 @@ negocio -> datos -> insight -> decisión
 Ejemplo general del ciclo: Negocio = las ventas han disminuido en una categoría de productos; Datos = ventas por producto, fecha, tienda, cliente y categoría; Insight = la categoría baja más en determinadas fechas o zonas; Decisión = lanzar promoción, cambiar estrategia comercial o ajustar inventario.
 
 En `farmabi`, el ciclo completo del curso se implementa así (S1 solo trabaja la primera etapa; el resto se construye en las siguientes sesiones):
+
+**Figura 2. Flujo de datos del ciclo BI en farmabi, de la fuente OLTP a la decisión**
 
 ```mermaid
 flowchart LR
@@ -139,6 +154,8 @@ flowchart LR
 ```
 
 #### 2.1.1 Conceptos clave de la sesión
+
+**Tabla 4. Conceptos clave de la sesión**
 
 | Concepto | Sentido en el curso |
 |---|---|
@@ -159,6 +176,8 @@ Una vez identificada la decisión que se quiere mejorar, el siguiente paso del c
 
 En `farmabi`, la fuente operacional es una base transaccional MySQL (`farma_oltp_db`) que registra la operación diaria de una cadena de farmacia:
 
+**Tabla 5. Tablas OLTP de farmabi y su uso analítico probable**
+
 | Tabla OLTP | Uso analítico probable |
 |---|---|
 | `clientes` | Análisis por cliente. |
@@ -168,6 +187,8 @@ En `farmabi`, la fuente operacional es una base transaccional MySQL (`farma_oltp
 | `pedido_detalles` | Cantidades, precios, descuentos, costos y venta. |
 
 El repositorio ya contiene el laboratorio completo que este flujo va a usar durante el curso, aunque en S1 solo se explora la fuente operacional:
+
+**Tabla 6. Componentes del laboratorio farmabi y su rol en el caso BI**
 
 | Carpeta o archivo | Rol en el caso BI |
 |---|---|
@@ -188,6 +209,8 @@ Ejemplo: *"La caída de ventas en zapatos está asociada a quiebres de stock, lo
 
 Un dato aislado no es un insight. `total_descuento_unitario = 1.00` en una fila de `pedido_detalles` no le dice nada a un gerente. Un **insight** aparece cuando ese dato se agrega, se compara o se pone en contexto de forma que alguien pueda leerlo y actuar:
 
+**Tabla 7. De un dato aislado a un insight accionable**
+
 | Solo dato | Insight |
 |---|---|
 | `pedido_detalles.total_descuento_unitario = 1.00` en una fila | "Los descuentos representan el 8% del margen de la familia TABLETA este mes." |
@@ -199,6 +222,8 @@ Convertir dato en insight requiere tres operaciones típicas: **agregar** (sumar
 #### 2.3.1 Niveles de analítica
 
 No todo insight tiene la misma profundidad. Existen cuatro niveles de analítica, de menor a mayor complejidad:
+
+**Tabla 8. Niveles de analítica**
 
 | Nivel | Qué hace | Pregunta de análisis (ejemplo) |
 |---|---|---|
@@ -215,6 +240,8 @@ Un insight solo tiene valor si llega a la persona correcta, en el momento correc
 
 Errores frecuentes que rompen este último paso del ciclo:
 
+**Tabla 9. Errores frecuentes al pasar del insight a la decisión**
+
 | Problema | Riesgo | Corrección |
 |---|---|---|
 | Empezar por gráficos | Dashboard bonito sin decisión clara. | Definir decisión y pregunta primero. |
@@ -229,16 +256,20 @@ Por eso el ciclo BI se recorre completo desde S1: sin un actor identificado y un
 
 Tiempo: 3h.
 
-El docente guía la lectura del caso `farmabi` y los estudiantes construyen el primer documento de definición BI.
+**Actividad:** construcción guiada del caso de negocio BI de `farmabi`, desde el flujo del laboratorio hasta la tabla Negocio-Datos-Insight-Decisión.
 
-Hoja de ruta de la sesión práctica:
+**Propósito de la actividad:** delimitar, con la guía del docente, el problema de negocio, las decisiones ejecutivas, las preguntas analíticas y las fuentes de datos que sostienen el caso `farmabi`, verificando cada avance antes de continuar al siguiente paso.
 
-- 3.1 Reconocer el flujo del laboratorio.
-- 3.2 Identificar decisiones de negocio.
-- 3.3 Formular preguntas analíticas.
-- 3.4 Mapear preguntas a fuentes.
-- 3.5 Definir el alcance inicial.
-- 3.6 Construir la tabla Negocio-Datos-Insight-Decisión.
+**Orientaciones metodológicas:** en clase, el docente guía la lectura del caso `farmabi` y la construcción del documento de definición BI paso a paso frente a la clase; los estudiantes replican cada paso identificando decisiones, preguntas analíticas y fuentes reales del repositorio, verificando cada avance antes de continuar al siguiente.
+
+**Actividades para realizar:**
+
+- **3.1** Reconocer el flujo del laboratorio.
+- **3.2** Identificar decisiones de negocio.
+- **3.3** Formular preguntas analíticas.
+- **3.4** Mapear preguntas a fuentes.
+- **3.5** Definir el alcance inicial.
+- **3.6** Construir la tabla Negocio-Datos-Insight-Decisión.
 
 ### 3.1 Reconocer el flujo del laboratorio
 
@@ -262,6 +293,8 @@ Responde:
 **Producto del paso:** lista priorizada de decisiones ejecutivas.
 
 Propón al menos cinco decisiones posibles. Ejemplos:
+
+**Tabla 10. Decisiones de negocio propuestas para el caso farmabi**
 
 | Decisión | Actor | Frecuencia |
 |---|---|---|
@@ -290,6 +323,8 @@ Ejemplos:
 ### 3.4 Mapear preguntas a fuentes
 
 **Producto del paso:** matriz pregunta-fuente.
+
+**Tabla 11. Matriz pregunta-fuente del caso farmabi**
 
 | Pregunta | Tablas fuente | Campos candidatos |
 |---|---|---|
@@ -320,11 +355,15 @@ Riesgos de calidad de datos:
 
 El docente modela primero un ejemplo con el caso `farmabi`:
 
+**Tabla 12. Ejemplo guiado del ciclo Negocio-Datos-Insight-Decisión**
+
 | Negocio | Datos | Insight | Decisión |
 |---|---|---|---|
 | Caída de rentabilidad en una familia de productos | Ventas y costos por familia (`pedido_detalles`, `productos`, `categorias`, `familias`) | La familia vende bien pero deja poco margen por los descuentos aplicados | Ajustar precio o renegociar costo con el proveedor |
 
 Luego, toma dos de las decisiones priorizadas en 3.2 y complétalas siguiendo la secuencia completa del ciclo BI:
+
+**Tabla 13. Ciclo Negocio-Datos-Insight-Decisión aplicado por el estudiante**
 
 | Negocio | Datos | Insight | Decisión |
 |---|---|---|---|
@@ -337,25 +376,9 @@ Este es el mismo esquema Negocio → Datos → Insight → Decisión que vas a a
 
 Tiempo: 4h fuera del aula.
 
-### 4.1 Plantilla de evidencia individual
+### 4.1 Actividad
 
-Entrega un PDF con el siguiente nombre:
-
-```text
-S01_Equipo##_ApellidoNombre.pdf
-```
-
-El PDF debe usar esta estructura. La primera sección define el trabajo autónomo; completa las demás con tus evidencias.
-
-#### 4.1.1 Datos del estudiante
-
-- Nombre:
-- Equipo:
-- Sesión: S01 - Fundamentos BI y problema de negocio
-- Rol o aporte realizado:
-- Link del repositorio:
-
-#### 4.1.2 Trabajo autónomo realizado
+Continuación autónoma e individual del caso de negocio BI de `farmabi`, consolidando la decisión priorizada, las preguntas analíticas y el mapeo a fuentes trabajados de forma guiada en la sección 3.
 
 Completa y evidencia estas tareas:
 
@@ -365,18 +388,48 @@ Completa y evidencia estas tareas:
 4. Matriz pregunta-fuente.
 5. Tabla Negocio-Datos-Insight-Decisión con al menos dos decisiones completas.
 
-#### 4.1.3 Evidencia técnica
+### 4.2 Propósito
 
-Incluye capturas o extractos con una breve explicación debajo de cada uno:
+Que cada estudiante demuestre, de forma individual y fuera del aula, que puede reproducir el patrón construido en clase sin el acompañamiento del docente.
 
-- Mapa del flujo de datos del laboratorio (3.1).
-- Lista de decisiones ejecutivas evaluadas (3.2).
-- Banco de preguntas analíticas (3.3).
-- Matriz pregunta-fuente (3.4).
-- Alcance inicial completo (3.5).
-- Tabla Negocio-Datos-Insight-Decisión (3.6).
+El caso `farmabi` es el mismo dominio que se trabaja durante todo el curso: esta actividad no cambia de dominio, sino que exige que cada estudiante sustente su propio aporte individual dentro del caso compartido, con datos y decisiones que pueda defender por sí solo.
 
-#### 4.1.4 Error o hallazgo
+### 4.3 Indicaciones
+
+Entrega un PDF con el siguiente nombre:
+
+```text
+S01_Equipo##_ApellidoNombre.pdf
+```
+
+Cada captura de pantalla del informe debe mostrar, sin recortar, el reloj del sistema (fecha y hora) y tu usuario o foto de perfil (Windows, VS Code o navegador) visibles en pantalla — es lo que permite verificar que la evidencia es tuya y que corresponde al momento real de tu trabajo.
+
+#### 4.3.1 Estructura del informe
+
+**Datos del estudiante**
+
+- Nombre:
+- Equipo:
+- Sesión: S01 - Fundamentos BI y problema de negocio
+- Rol o aporte realizado:
+- Link de GitHub:
+
+**Evidencia técnica**
+
+Incluye capturas o extractos con una breve explicación debajo de cada uno, organizados en los mismos 4 bloques de la rúbrica (4.6) — así queda claro qué evidencia corresponde a cada criterio evaluado:
+
+1. *Problema y decisión*
+    - Lista de decisiones ejecutivas evaluadas (3.2).
+    - Alcance inicial completo (3.5).
+2. *Preguntas analíticas*
+    - Banco de preguntas analíticas (3.3).
+3. *Mapeo a fuentes*
+    - Matriz pregunta-fuente (3.4).
+4. *Comprensión del ciclo BI*
+    - Mapa del flujo de datos del laboratorio (3.1).
+    - Tabla Negocio-Datos-Insight-Decisión (3.6).
+
+**Error o hallazgo**
 
 Describe al menos un riesgo de calidad o trazabilidad detectado en las fuentes del caso:
 
@@ -384,7 +437,7 @@ Describe al menos un riesgo de calidad o trazabilidad detectado en las fuentes d
 - Cómo lo identificaste.
 - Cómo lo documentaste o qué supuesto tomaste.
 
-#### 4.1.5 Reflexión técnica breve
+**Reflexión técnica breve**
 
 Responde en 5 a 8 líneas:
 
@@ -392,7 +445,7 @@ Responde en 5 a 8 líneas:
 ¿Por qué una solución BI debe empezar por una decisión y no por un gráfico?
 ```
 
-### 4.2 Criterios mínimos de aceptación
+### 4.4 Criterios mínimos de aceptación
 
 La evidencia individual se considera completa si:
 
@@ -401,43 +454,12 @@ La evidencia individual se considera completa si:
 - Las fuentes pertenecen al repositorio `farmabi`.
 - El documento conecta negocio, datos y decisión.
 - La evidencia identifica un aporte individual verificable.
+- Cada captura de la evidencia técnica muestra el reloj del sistema y el usuario/perfil visible, sin recortar.
+- Las fechas y horas de las capturas son coherentes con el historial de commits de su repositorio en GitHub.
+- Incluye un error o hallazgo técnico diagnosticado.
+- Incluye la reflexión técnica breve solicitada.
 
-## 5. Cierre evaluativo
-
-Tiempo: 20 min.
-
-Esta sección conecta el resultado de aprendizaje de la sesión con el producto que debe evidenciar cada estudiante.
-
-### 5.1 Resultados esperados
-
-Al finalizar la sesión, el estudiante debe demostrar que:
-
-- Explica el ciclo BI.
-- Identifica el problema de negocio del caso farmacia.
-- Distingue fuente operacional, DW, DataMart y dashboard.
-- Formula preguntas analíticas verificables.
-- Mapea preguntas hacia tablas fuente.
-
-### 5.2 Evidencia del producto de sesión
-
-Cada estudiante entrega un PDF individual siguiendo la plantilla de la sección 4.1.
-
-Nombre del archivo:
-
-```text
-S01_Equipo##_ApellidoNombre.pdf
-```
-
-La evidencia debe demostrar:
-
-- Caso de negocio BI delimitado.
-- Aporte individual verificable.
-- Preguntas analíticas y matriz pregunta-fuente completas.
-- Reflexión técnica breve.
-
-La revisión se realiza con los criterios mínimos de aceptación de la sección 4.2 y la rúbrica de la sección 5.4.
-
-### 5.3 Preguntas de defensa y reflexión
+### 4.5 Preguntas de defensa
 
 1. ¿Qué decisión de negocio guía tu solución BI?
 2. ¿Qué usuario consumirá el dashboard?
@@ -445,28 +467,45 @@ La revisión se realiza con los criterios mínimos de aceptación de la sección
 4. ¿Qué tabla fuente respalda esa pregunta?
 5. ¿Qué riesgo aparece si no se define el problema antes del dashboard?
 
-### 5.4 Rúbrica de evaluación
+### 4.6 Rúbrica de evaluación
 
-| Dimensión | Peso | 3 - Logro destacado | 2 - Logro | 1 - Proceso | 0 - Inicio | Puntuación obtenida |
+**Tabla 14. Rúbrica de evaluación**
+
+| Criterio | Peso (%) | A (20 pts) | B (15 pts) | C (10 pts) | D (5 pts) | Nivel obtenido |
 |---|---:|---|---|---|---|---:|
-| 1. Problema y decisión | 2 | Delimita problema, actor y decisión con claridad ejecutiva. | Define problema y decisión comprensibles. | Presenta una idea general sin actor claro. | No delimita el problema. | |
-| 2. Preguntas analíticas | 2 | Formula preguntas medibles, priorizadas y conectadas al negocio. | Formula preguntas medibles. | Preguntas vagas o poco medibles. | No formula preguntas útiles. | |
-| 3. Mapeo a fuentes | 2 | Relaciona preguntas con tablas y campos reales del repositorio. | Relaciona preguntas con tablas reales. | Mapeo incompleto o genérico. | No usa fuentes reales. | |
-| 4. Comprensión del ciclo BI | 2 | Explica negocio -> datos -> insight -> decisión aplicado a `farmabi`. | Explica el ciclo BI de forma correcta. | Explicación parcial. | No explica el ciclo. | |
-| 5. Aporte individual | 1 | Aporte verificable y bien documentado. | Aporte identificable. | Aporte mencionado de forma general. | Sin aporte individual. | |
-| 6. Orden y reflexión | 1 | Evidencia clara, ordenada y reflexión técnica precisa. | Evidencia comprensible. | Evidencia desordenada o superficial. | Sin evidencia suficiente. | |
+| 1. Problema y decisión* | 25 | Delimita problema, actor y decisión con claridad ejecutiva, aplicado al caso `farmabi`. | Define problema y decisión comprensibles. | Presenta una idea general sin actor claro. | No delimita el problema. | |
+| 2. Preguntas analíticas* | 25 | Formula preguntas medibles, priorizadas y conectadas al negocio (mínimo cinco). | Formula preguntas medibles. | Preguntas vagas o poco medibles. | No formula preguntas útiles. | |
+| 3. Mapeo a fuentes* | 25 | Relaciona cada pregunta con tablas y campos reales del repositorio `farmabi`. | Relaciona preguntas con tablas reales. | Mapeo incompleto o genérico. | No usa fuentes reales. | |
+| 4. Comprensión del ciclo BI* | 25 | Explica negocio -> datos -> insight -> decisión aplicado a `farmabi`, con la tabla Negocio-Datos-Insight-Decisión completa. | Explica el ciclo BI de forma correcta. | Explicación parcial. | No explica el ciclo. | |
 
-Puntuación acumulada = suma de (`Peso` * `Puntuación obtenida`) = ____.
+\* Agregado manual.
 
-Nota final = (`Puntuación acumulada` / 30) * 20 = ____.
+Nota final = suma de (`Peso` / 100 × `Puntos del nivel obtenido`) = ____ / 20.
 
 Para usar la rúbrica con IA, solicita:
 
 ```text
 Evalúa el PDF usando la rúbrica de la sesión.
-Para cada dimensión selecciona la puntuación obtenida usando la escala Inicio=0, Proceso=1, Logro=2, Logro destacado=3.
-Justifica brevemente cada puntuación.
-Calcula la puntuación acumulada con la fórmula: suma de (Peso * Puntuación obtenida).
-Calcula la nota final sobre 20 con la fórmula: (Puntuación acumulada / 30) * 20.
+Para cada criterio selecciona el nivel obtenido usando la escala A=20, B=15, C=10, D=5 puntos.
+Justifica brevemente cada nivel asignado.
+Verifica que cada captura muestre reloj del sistema y usuario/perfil visible, y que las fechas sean coherentes con el historial de commits de GitHub. Si falta esta evidencia o hay inconsistencias, indícalo explícitamente antes de calificar.
+Calcula la nota final con la fórmula: suma de (Peso/100 × Puntos del nivel obtenido), directamente sobre 20.
 Indica 2 fortalezas y 2 recomendaciones.
 ```
+
+## 5. Cierre
+
+Tiempo: 5 min.
+
+**Resumen breve:** hoy se delimitó el caso de negocio BI de `farmabi`: problema, actores, decisiones priorizadas, preguntas analíticas y su mapeo a las fuentes reales del repositorio.
+
+**Dinámica participativa:** en una ronda rápida (o con una herramienta digital tipo formulario o encuesta en vivo), cada estudiante comparte en una frase la decisión de negocio que priorizó y por qué.
+
+**Metacognición:** cada estudiante responde en voz alta o por escrito: ¿qué parte de la sesión te costó más entender, y cómo la resolviste?
+
+**Proyección:** el caso delimitado hoy se retoma en S2 para construir los requerimientos analíticos con KPIs, y el hábito de partir de una decisión de negocio antes de tocar datos o dashboards aplica a cualquier proyecto BI profesional, dentro o fuera del curso.
+
+## Bibliografía
+
+1. Simon, H. A. (1977). *The new science of management decision* (Rev. ed.). Prentice-Hall.
+2. Kimball, R., & Ross, M. (2013). *The data warehouse toolkit: The definitive guide to dimensional modeling* (3rd ed.). Wiley.

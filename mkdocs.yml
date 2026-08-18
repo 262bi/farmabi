@@ -1,4 +1,4 @@
-site_name: Inteligencia de Negocios
+site_name: FarmaBI
 site_description: Documentacion del proyecto BI farmabi
 repo_url: https://github.com/262bi/farmabi
 repo_name: 262bi/farmabi
@@ -13,9 +13,11 @@ nav:
       - Silabo 2026-2: silabo_bi_2026_2.md
   - 1. Definición del sistema de información para ejecutivos:
       - S1 - Fundamentos BI y problema de negocio: sesiones/S01_Fundamentos_BI_Problema_Negocio.md
+      - S2 - Requerimientos Analíticos y KPIs: sesiones/S02_Requerimientos_Analiticos_KPIs.md
 
 theme:
   name: material
+  custom_dir: overrides
   features:
     - navigation.instant
     - navigation.tracking

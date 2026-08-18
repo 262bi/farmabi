@@ -14,6 +14,10 @@ MySQL OLTP -> Debezium -> Kafka -> PostgreSQL RAW -> dbt -> PostgreSQL DW -> Pow
     - Repositorio: [`261bi/farmabi`](https://github.com/261bi/farmabi)
     - Grabaciones y materiales de sesión: [Google Drive](https://drive.google.com/drive/folders/10G5snPuZMHih_3TkpWQLII_fb9p8PQ_N)
 
+## Implementación vigente
+
+Por ahora **S1-S2** están publicadas; **S3-S16** se muestran abajo únicamente como referencia de los temas del sílabo.
+
 ## Producto del curso
 
 Producto del curso = Producto U3:
@@ -38,8 +42,8 @@ Resultado esperado U1: el estudiante convierte una necesidad de negocio en una e
 
 | Sesion | Tema | Producto de sesion |
 |---|---|---|
-| S1 | Fundamentos BI: problema de negocio y ciclo BI negocio -> datos -> insight -> decision | Caso de negocio BI delimitado, actores, decisiones esperadas y preguntas analiticas iniciales |
-| S2 | Requerimientos analiticos y KPIs | Matriz de requerimientos analiticos con KPIs, formulas, dimensiones de analisis y criterios de aceptacion |
+| [S1](sesiones/S01_Fundamentos_BI_Problema_Negocio.md) | Fundamentos BI: problema de negocio y ciclo BI negocio -> datos -> insight -> decision | Caso de negocio BI delimitado, actores, decisiones esperadas y preguntas analiticas iniciales |
+| [S2](sesiones/S02_Requerimientos_Analiticos_KPIs.md) | Requerimientos analiticos y KPIs | Matriz de requerimientos analiticos con KPIs, formulas, dimensiones de analisis y criterios de aceptacion |
 | S3 | Modelado dimensional y metadata: hechos, grano, dimensiones, jerarquias, fuentes y mapeo fuente-modelo | Modelo dimensional inicial con hecho principal, dimensiones, grano, jerarquias, diccionario de datos y trazabilidad fuente-modelo |
 | S4 | Diseno de la solucion BI: KPIs, mockup del dashboard y consumo analitico | Blueprint de la solucion BI con KPIs priorizados, mockup del dashboard, filtros, usuarios y flujo de consumo |
 | S5 | Evaluacion U1 | Documento de diseno BI validado y defendido como base de construccion |
@@ -210,6 +214,7 @@ Convencion del diagrama: esta variante reemplaza Debezium + Kafka por Airbyte. A
 ## Enlaces
 
 - [S1 - Fundamentos BI y problema de negocio](sesiones/S01_Fundamentos_BI_Problema_Negocio.md)
+- [S2 - Requerimientos Analíticos y KPIs](sesiones/S02_Requerimientos_Analiticos_KPIs.md)
 - [Plantilla entregable U1](guias/PLANTILLA_ENTREGABLE_U1_REQUERIMIENTOS_BI_MODELADO_DIMENSIONAL.md)
 - [Plantilla entregable U2](guias/PLANTILLA_ENTREGABLE_U2_ETL_CALIDAD_DATOS_DATAMART.md)
 - [Plantilla producto del curso U3](guias/PLANTILLA_PRODUCTO_CURSO_U3_BI_END_TO_END.md)
